@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6833730788341631612}
   m_Layer: 0
-  m_Name: Super Jump Area
+  m_Name: Super Slow Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 8434089966270778046}
   - component: {fileID: 3923955724278284670}
   m_Layer: 6
-  m_Name: Super Jump Trigger
+  m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,13 +166,25 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3923955724278284670}
         m_TargetAssemblyTypeName: NarrationsJouables.PlayerStatsSetter, NarrationsJouables
-        m_MethodName: SetJumpHeight
+        m_MethodName: SetMoveSpeed
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 5
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3923955724278284670}
+        m_TargetAssemblyTypeName: NarrationsJouables.PlayerStatsSetter, NarrationsJouables
+        m_MethodName: SetSprintSpeed
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2.5
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -181,13 +193,25 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3923955724278284670}
         m_TargetAssemblyTypeName: NarrationsJouables.PlayerStatsSetter, NarrationsJouables
-        m_MethodName: SetJumpHeight
+        m_MethodName: SetMoveSpeed
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 1.2
+          m_FloatArgument: 2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3923955724278284670}
+        m_TargetAssemblyTypeName: NarrationsJouables.PlayerStatsSetter, NarrationsJouables
+        m_MethodName: SetSprintSpeed
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 5.335
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -309,7 +333,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Super Jump
+  m_text: Super Slow
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c05b04efc1d3d40b1b44edb39efd982c, type: 2}
   m_sharedMaterial: {fileID: 3458954146614481753, guid: c05b04efc1d3d40b1b44edb39efd982c, type: 2}
