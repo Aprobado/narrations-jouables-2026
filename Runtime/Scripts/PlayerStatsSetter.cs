@@ -11,7 +11,7 @@ namespace NarrationsJouables
             get
             {
                 if (firstPersonController == null)
-                    firstPersonController = FindFirstObjectByType<FirstPersonController>(FindObjectsInactive.Include);
+                    firstPersonController = FindAnyObjectByType<FirstPersonController>(FindObjectsInactive.Include);
                 return firstPersonController;
             }
         }
@@ -22,7 +22,7 @@ namespace NarrationsJouables
             get
             {
                 if (thirdPersonController == null)
-                    thirdPersonController = FindFirstObjectByType<ThirdPersonController>(FindObjectsInactive.Include);
+                    thirdPersonController = FindAnyObjectByType<ThirdPersonController>(FindObjectsInactive.Include);
                 return thirdPersonController;
             }
         }

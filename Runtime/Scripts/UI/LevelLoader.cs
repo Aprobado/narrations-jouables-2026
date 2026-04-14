@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace NarrationsJouables.TitleScreen
+namespace NarrationsJouables.UI
 {
     public class LevelLoader : MonoBehaviour
     {

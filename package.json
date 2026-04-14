@@ -1,7 +1,7 @@
 {
   "name": "edu.epfl.shs2026.narrationsjouables2026",
   "displayName": "Narrations Jouables 2026",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "unity": "6000.4",
   "description": "Package contenant les assets et scripts nécessaires pour le cours.",
   "keywords": ["education", "urp", "unity", "walking simulator"],

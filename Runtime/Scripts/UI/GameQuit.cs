@@ -3,7 +3,7 @@ using UnityEditor;
 #endif
 using UnityEngine;
 
-namespace NarrationsJouables.TitleScreen
+namespace NarrationsJouables.UI
 {
     public class GameQuit : MonoBehaviour
     {
