@@ -29,6 +29,10 @@ namespace NarrationsJouables.UI
             menuIsOn = false;
             UpdateMenuState();
             menuAction = InputSystem.actions.FindAction("Menu");
+			if (menuAction == null)
+            {
+				Debug.LogError($"[MenuActions] This script needs a \"Menu\" action in the input system scheme in order to work.");
+			}
             navigateAction = InputSystem.actions.FindAction("Navigate");
             
             var playerControlManager = FindAnyObjectByType<PlayerControlPauseHandler>();
@@ -57,10 +61,13 @@ namespace NarrationsJouables.UI
                 }
             }
 
-            if (menuAction.WasPressedThisFrame())
+            if (menuAction != null)
             {
-                newIsGamepad = menuAction.activeControl.device.name != "Keyboard";
-                newMenuIsOn = !menuIsOn;
+                if (menuAction.WasPressedThisFrame())
+                {
+                    newIsGamepad = menuAction.activeControl.device.name != "Keyboard";
+                    newMenuIsOn = !menuIsOn;
+                }
             }
 
             if (isGamepad != newIsGamepad || menuIsOn != newMenuIsOn)

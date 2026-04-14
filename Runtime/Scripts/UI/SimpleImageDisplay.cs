@@ -21,7 +21,15 @@ namespace NarrationsJouables.UI
         {
             canvas = GetComponent<Canvas>();
             inventoryAction = InputSystem.actions.FindAction("Inventory");
+            if (inventoryAction == null)
+            {
+                Debug.LogError($"[SimpleImageDisplay] This script needs a \"Inventory\" action in the input system scheme in order to work.");
+            }
             interactAction = InputSystem.actions.FindAction("Interact");
+            if (interactAction == null)
+            {
+                Debug.LogError($"[SimpleImageDisplay] This script needs a \"Interact\" action in the input system scheme in order to work.");
+            }
             displayIsOn = false;
             canvas.enabled = displayIsOn;
         }
@@ -50,11 +58,11 @@ namespace NarrationsJouables.UI
                 return;
             }
 
-            if (inventoryAction.WasPressedThisFrame())
+            if (inventoryAction != null && inventoryAction.WasPressedThisFrame())
             {
                 displayIsOn = !displayIsOn;
             }
-            else if (interactAction.WasPressedThisFrame() && displayIsOn)
+            else if (interactAction != null && interactAction.WasPressedThisFrame() && displayIsOn)
             {
                 displayIsOn = !displayIsOn;
             }

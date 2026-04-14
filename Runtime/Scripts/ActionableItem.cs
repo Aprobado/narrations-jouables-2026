@@ -27,6 +27,10 @@ namespace NarrationsJouables
         private void Awake()
         {
             interactAction = InputSystem.actions.FindAction("Interact");
+            if (interactAction == null)
+            {
+                Debug.LogError($"[ActionableItem] This script needs a \"Interact\" action in the input system scheme in order to work.");
+            }
         }
 
         private void Start()
@@ -36,7 +40,7 @@ namespace NarrationsJouables
 
         void Update()
         {
-            if (interactAction.WasPressedThisFrame())
+            if (interactAction != null && interactAction.WasPressedThisFrame())
             {
                 if (!actionable) return;
                 if (PlayerControlPauseHandler != null && !PlayerControlPauseHandler.playerControlIsOn) return;
