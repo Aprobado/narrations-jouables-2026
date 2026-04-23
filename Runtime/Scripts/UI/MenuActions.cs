@@ -69,6 +69,20 @@ namespace NarrationsJouables.UI
                     newMenuIsOn = !menuIsOn;
                 }
             }
+            else
+            {
+                // default menu input if no menu action exists
+                if (Keyboard.current.escapeKey.wasPressedThisFrame)
+                {
+                    newIsGamepad = false;
+                    newMenuIsOn = !menuIsOn;
+                }
+                else if (Gamepad.current.startButton.wasPressedThisFrame)
+                {
+                    newIsGamepad = true;
+                    newMenuIsOn = !menuIsOn;
+                }
+            }
 
             if (isGamepad != newIsGamepad || menuIsOn != newMenuIsOn)
             {
