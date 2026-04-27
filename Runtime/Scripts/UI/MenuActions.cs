@@ -72,12 +72,12 @@ namespace NarrationsJouables.UI
             else
             {
                 // default menu input if no menu action exists
-                if (Keyboard.current.escapeKey.wasPressedThisFrame)
+                if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
                 {
                     newIsGamepad = false;
                     newMenuIsOn = !menuIsOn;
                 }
-                else if (Gamepad.current.startButton.wasPressedThisFrame)
+                else if (Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame)
                 {
                     newIsGamepad = true;
                     newMenuIsOn = !menuIsOn;
